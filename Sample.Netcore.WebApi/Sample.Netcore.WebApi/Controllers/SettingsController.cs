@@ -32,7 +32,8 @@ namespace Sample.Netcore.WebApi.Controllers
         [HttpGet("{id}", Name = "Get")]
         public string Get(string id)
         {
-            return "value";
+            var result = Configuration[id];
+            return result;
         }
     }
 }
